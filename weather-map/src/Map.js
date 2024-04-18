@@ -14,8 +14,8 @@ const center = {
 
 function MapComponent({ onClick }) {
   return (
-    // {process.env.GOOGLE_MAPS_API_KEY}
-    <LoadScript googleMapsApiKey='AIzaSyALRqtjtdfAe51hrcAJi93VbPxIcA5ETe8'>
+    
+    <LoadScript googleMapsApiKey={process.env.GOOGLE_MAPS_API_KEY}>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
