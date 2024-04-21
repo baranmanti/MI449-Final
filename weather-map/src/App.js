@@ -57,9 +57,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-danger" style={{ textAlign: 'center', marginTop: '5vh' }}>Weather Map</h1>
-      <p style={{ textAlign: 'center', fontSize: '0.75em'}}>Click anywhere on the map to see the live weather data.</p>
-      <div className='mapHolder' style={{ display: 'flex', flexDirection: 'row', perspective: '100vw' }}>
+      <h1 className="text-light bg-primary m0 py-3 mb-0 w-100" style={{ textAlign: 'center'}}>Weather Map</h1>
+      <p className="mt-3" style={{ textAlign: 'center', fontSize: '0.75em'}}>Click anywhere on the map to see the live weather data.</p>
+      <div className="d-flex" style={{ perspective: '100vw' }}>
         <MapComponent onClick={handleMapClick} />
         {weather && (
           <Card 
@@ -81,7 +81,7 @@ function App() {
             onMouseLeave={(e) => e.currentTarget.style.transform = 'rotateY(-20deg)'}
           >
             <Card.Body>
-              <Card.Title className="text-dark" style={{ fontSize: '2em' }}>Current Weather</Card.Title>
+              <Card.Title className="text-dark fs-2">Current Weather</Card.Title>
               <Card.Text style={{ fontSize: '1.25em' }}>
                 <span className="text-primary">Weather:</span> {weather.weatherDescription}<br />
                 <span className="text-primary">Temperature:</span> {weather.temperature_2m} °F<br />
